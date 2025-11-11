@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+        /* 新增：頁面底部的返回首頁按鈕樣式 */
+        #return-home-btn {
+            position: fixed;
+            left: 50%;
+            bottom: 12px;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.75);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 3000;
+            font-size: 16px;
+            user-select: none;
+        }
+    </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="menu-container" class="menu"></div>
+    <script src="sketch.js"></script>
+
+    <!-- 新增：固定在頁面底部的返回首頁按鈕 -->
+    <div id="return-home-btn" role="button" aria-label="返回首頁">返回首頁</div>
+
+    <script>
+        // 點擊後導回根目錄（如需改成只關閉 quiz modal，改為 closeQuizModal()）
+        document.getElementById('return-home-btn').addEventListener('click', function () {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+</html>
