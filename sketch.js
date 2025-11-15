@@ -1783,7 +1783,7 @@ if (window.__sketch_js_loaded) {
         // 圖片（放上方）
         const img = document.createElement('img');
         // 確保檔案已複製到專案資料夾（與 index.html 同目錄）
-        img.src = '1000009131.jpg';
+        img.src = '31479.jpg';
         img.alt = '自我介紹圖片';
         img.style.width = '240px';
         img.style.height = 'auto';
